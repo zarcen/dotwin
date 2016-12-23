@@ -1,0 +1,39 @@
+{
+    "tools": [
+        {
+            "name": "grep",
+            "args": "--color=always",
+            "opt": true
+        },
+        {
+            "name": "sed",
+            "args": "",
+            "opt": true
+        },
+        {
+            "name": "awk",
+            "args": "",
+            "opt": true
+        },
+        {
+            "name": "which",
+            "args": "",
+            "opt": true
+        },
+        {
+            "name":"npm",
+            "args":"",
+            "opt": true
+        },
+        {
+            "name":"git",
+            "args":"",
+            "opt": true
+        },
+        {
+            "name":"sort",
+            "args":"",
+            "opt":true
+        }
+    ]
+}
