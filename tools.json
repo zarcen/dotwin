@@ -49,6 +49,11 @@
             "name":"python",
             "args":"",
             "enabled":true
+        },
+        {
+            "name":"perl",
+            "args":"",
+            "enabled":true
         }
     ]
 }
