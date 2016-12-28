@@ -6,7 +6,7 @@ For managing personal scripts, small tools, GNU toolset mapping in Windows envir
 The purpose of this repo is to do something similar as .zsh, .bashrc, .profile in *nix environment.
 
 ## Bash support
-Now that Windows has bash support natively, powerer by "Windows Subsystem for Linux" since Windows 10 Redstone,
+Now that Windows has bash support natively, powered by "Windows Subsystem for Linux" since Windows 10 Redstone,
 we can leverage GNU toolchain and some very useful utilities from bash.
 You can find how to enable this feature at https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
 
