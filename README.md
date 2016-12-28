@@ -5,6 +5,22 @@ For managing personal scripts, small tools, GNU toolset mapping in Windows envir
 ## Purpose
 The purpose of this repo is to do something similar as .zsh, .bashrc, .profile in *nix environment.
 
+## Get Started
+### Prerequisite
+This repo is dedicated to Windows 10 which version is new enough with the "Windows Subsystem for Linux" feature supported.
++ Windows 10 64-bit OS
+
++ Build version later than 14393
+
++ Powershell<br>
+    <i>Directly come with Windows 10. If not enabled, in start menu type type "turn windows features on or off" and enable it</i>
++ Developer Mode (Start -> Settings -> Update & Security -> For Developers)
+
+### Install
+To install, simply execute `install.cmd`
+
+You would need Admin permission to enable "Windows Subsystem for Linux" and the script will prompt you that. No need to execute it with Administrator privilege.
+
 ## Bash support
 Now that Windows has bash support natively, powered by "Windows Subsystem for Linux" since Windows 10 Redstone,
 we can leverage GNU toolchain and some very useful utilities from bash.
