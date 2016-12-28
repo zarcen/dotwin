@@ -8,7 +8,6 @@
 
 :: Set Environment variables
 call :set_dotwin_var
-if errorlevel 1 exit /b
 :: Load personal alias definition
 call %DOTWIN%\alias.cmd
 
@@ -21,11 +20,7 @@ exit /b
 :: ******************************** SUBROUTINE ********************************
 :set_dotwin_var:
     :: Set dotwin Root Path
-    if "%DOTWIN%"=="" (
-        set DOTWIN=%USERPROFILE%\dotwin
-    ) else (
-        exit /b 1
-    )
+    if "%DOTWIN%"=="" set DOTWIN=%USERPROFILE%\dotwin
     set DOTWIN_PS1=%DOTWIN%\ps1
     set DOTWIN_BASHEE=%DOTWIN%\bashee
     :: Private(or Corporate internal) stuff
