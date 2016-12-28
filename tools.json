@@ -3,37 +3,52 @@
         {
             "name": "grep",
             "args": "--color=always",
-            "opt": true
+            "enabled": true
         },
         {
             "name": "sed",
             "args": "",
-            "opt": true
+            "enabled": true
         },
         {
             "name": "awk",
             "args": "",
-            "opt": true
+            "enabled": true
         },
         {
             "name": "which",
             "args": "",
-            "opt": true
+            "enabled": true
         },
         {
             "name":"npm",
             "args":"",
-            "opt": true
+            "enabled": false
         },
         {
             "name":"git",
             "args":"",
-            "opt": true
+            "enabled": true
         },
         {
             "name":"sort",
             "args":"",
-            "opt":true
+            "enabled":true
+        },
+        {
+            "name":"ifconfig",
+            "args":"",
+            "enabled":true
+        },
+        {
+            "name":"make",
+            "args":"",
+            "enabled":true
+        },
+        {
+            "name":"python",
+            "args":"",
+            "enabled":true
         }
     ]
 }
