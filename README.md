@@ -44,7 +44,9 @@ executed in cmd.exe *like* native ones.
 * name:    the command name you want to map from bash
 * args:    the default args you want to put for this command. e.g. ls -l; grep --color=always
 * enabled: true/false; to be deployed or not by executing install.cmd
-Some useful tools that is no harm to deploy and extremely useful:
-- grep
-- sed
-- awk
+
+### Example utilities
+Some useful tools that have no harm to deploy and extremely useful:
++ grep
++ sed
++ awk
