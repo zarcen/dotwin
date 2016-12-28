@@ -31,12 +31,12 @@ To get toolchain like grep, sed, etc to run like natively on cmd.exe, we have so
 ~~~~
 Correct. Nevertheless, you would firstly need to set up AutoRun in your cmd.exe registry path to make this setup permanent.
 Second, considering some name conflict like `sort` (GNU sort and Windows sort.exe), this alias makes no use at all.
-Third, doskey cannot become a input to be consumed in Powershell (PSE). If you use powershell to pipe utilities all the time
+Third, doskey cannot become a input to be consumed in Powershell (PS). If you use powershell to pipe utilities all the time
 like:
 ~~~~
 PS> & program_foo.exe | Out-File -FilePath foo.log
 ~~~~
-You may hope the utilities from bash to be able to directly pipe in PSE. And to reach this is straightforward.
+You may hope the utilities from bash to be able to directly pipe in PS. And to reach this is straightforward.
 By scripting some dummy .cmd bash wrappers and setup a init script to include them in %PATH%, all these tools can be
 executed in cmd.exe *like* native ones.
 
