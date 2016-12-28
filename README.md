@@ -9,6 +9,7 @@ The purpose of this repo is to do something similar as .zsh, .bashrc, .profile i
 Now that Windows has bash support natively, powerer by "Windows Subsystem for Linux" since Windows 10 Redstone,
 we can leverage GNU toolchain and some very useful utilities from bash.
 You can find how to enable this feature at https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
+
 Or, to use the installer in this repo directly if you've already had windows in Developor Mode.
 
 You can certainly run bash.exe and do all the stuff under bash shell. However, you may want to use some
@@ -37,4 +38,13 @@ PS> & program_foo.exe | Out-File -FilePath foo.log
 ~~~~
 You may hope the utilities from bash to be able to directly pipe in PSE. And to reach this is straightforward.
 By scripting some dummy .cmd bash wrappers and setup a init script to include them in %PATH%, all these tools can be
-executed in cmd.exe *like* native ones. 
+executed in cmd.exe *like* native ones.
+
+## Tools.json
+* name:    the command name you want to map from bash
+* args:    the default args you want to put for this command. e.g. ls -l; grep --color=always
+* enabled: true/false; to be deployed or not by executing install.cmd
+Some useful tools that is no harm to deploy and extremely useful:
+- grep
+- sed
+- awk
