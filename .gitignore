@@ -1,2 +1,12 @@
+## for private or corporate internal tools
 private/
+
+## should be generated from tools.json
 bashee/
+
+## managed by getting its latest release instead of git submodule
+## to avoid building efforts
+clink/
+cmder/
+
+*.lnk

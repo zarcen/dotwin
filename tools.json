@@ -54,6 +54,16 @@
             "name":"perl",
             "args":"",
             "enabled":true
+        },
+        {
+            "name":"vim",
+            "args":"",
+            "enabled":true
+        },
+        {
+            "name":"tmux",
+            "args":"",
+            "enabled":true
         }
     ]
 }
