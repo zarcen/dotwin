@@ -66,3 +66,8 @@ Some useful tools that have no harm to deploy and extremely useful:
 + grep
 + sed
 + awk
+
+## TODO
+- integrate with cmder (https://github.com/cmderdev/cmder) (https://github.com/cmderdev/cmder/releases)
+- integrate with clink (https://github.com/mridgers/clink) (https://github.com/mridgers/clink/releases)
+
