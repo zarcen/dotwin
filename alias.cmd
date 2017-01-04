@@ -1,5 +1,5 @@
 :: alias.cmd
-::@echo off
+@echo off
 
 :: ----- utilities -----
 doskey ls=dir $*

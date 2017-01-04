@@ -4,7 +4,7 @@
 :: This script is automatically executed when starting cmd.exe by
 :: defining its path in the following regkey:
 :: "HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun"
-::@echo off
+@echo off
 
 :: Set Environment variables
 if "%DOTWIN%"=="" (
@@ -14,6 +14,7 @@ if "%DOTWIN%"=="" (
 call %DOTWIN%\alias.cmd
 
 call :set_prompt
+::TODO: BUG, clink makes doskey invalid in cmder
 call :launch_clink
 
 :: Simple "ver" prints empty line before Windows version
