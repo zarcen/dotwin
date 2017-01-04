@@ -16,8 +16,8 @@ call %DOTWIN%\alias.cmd
 call :set_prompt
 ::TODO: BUG, clink makes doskey invalid in cmder
 call :launch_clink
-
 :: Simple "ver" prints empty line before Windows version
+
 :: Use this construction to print just a version info
 cmd /d /c ver | "%windir%\system32\find.exe" "Windows"
 exit /b 0
