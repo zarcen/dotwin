@@ -41,10 +41,10 @@ exit /b
 
 :::::: PROMPT setting :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :set_prompt
-:: This will start prompt with `User@PC `
-set PromptHead=[$E[0;36m%USERNAME%@%COMPUTERNAME%$E[0;37m]$S
+:: This will start prompt with `user@hostname`
+set PromptHead=$E[0;36m%USERNAME%@%COMPUTERNAME%$E[0;37m$S
 
-:: Followed by colored `Path`
+:: Followed by colored `pwd`
 set PromptHead=%PromptHead%$E[0;32m$P$E[0;37m
 
 :: Use net command to test if it's run by Admin or not
@@ -52,7 +52,7 @@ set PromptHead=%PromptHead%$E[0;32m$P$E[0;37m
 net session >nul 2>&1 && set PromptRet=$E[1;31m$$$E[1;37m$S || set PromptRet=$E[1;31m$G$E[1;37m$S
 
 :: Set new prompt and show current time (format hh:mm:ss)
-set PS1=%PromptHead%$S($T)$_%PromptRet%
+set PS1=%PromptHead%$_$C$T$F%PromptRet%
 PROMPT %PS1%
 exit /b 0
 
