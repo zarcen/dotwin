@@ -1,5 +1,5 @@
 :: alias.cmd
-@echo off
+::@echo off
 
 :: ----- utilities -----
 doskey ls=dir $*
@@ -31,3 +31,5 @@ doskey npp=start notepad++ $*
 
 :: bash wrapping is in dotwin\bashee
 :: ****************************************************************************
+
+exit /b 0
