@@ -72,3 +72,5 @@ Some useful tools that have no harm to deploy and extremely useful:
 
 ## Misc
 - Nice ColorSheme if Using EmuCon:https://github.com/joonro/ConEmu-Color-Themes
+
+## Usecases
