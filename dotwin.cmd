@@ -32,11 +32,11 @@ exit /b 0
     set DOTWIN_BASHEE=%DOTWIN%\bashee
     :: Put bash wrapper scripts to be visible in PATH;
     :: Change order if prefer system default
-    path %PATH%;%DOTWIN_BASHEE%
+    path %DOTWIN_BASHEE%;%PATH%
 
     :: Private(or Corporate internal) stuff
     if exist %DOTWIN%\private set DOTWIN_PRIVATE=%DOTWIN%\private
-    if exist %DOTWIN_PRIVATE% path %PATH%;%DOTWIN_PRIVATE%
+    if exist %DOTWIN_PRIVATE% path %DOTWIN_PRIVATE%;%PATH%
 exit /b
 
 :::::: PROMPT setting :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
