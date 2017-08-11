@@ -28,7 +28,7 @@
         {
             "name":"git",
             "args":"",
-            "enabled": true
+            "enabled": false
         },
         {
             "name":"sort",

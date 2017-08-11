@@ -17,11 +17,11 @@ doskey bashc=bash -c "$*" :: usecase, bashc ./foo arg1 arg2
 
 :: ----- powershell wrapping -----
 if "%DOTWIN%"=="" (set DOTWIN=%USERPROFILE%\dotwin)
-set DOTWIN_PS1=%DOTWIN%\ps1
+set DOTWIN_POSH=%DOTWIN%\posh
 :: Usecase:
 ::    > sudo regedit
 ::    > sudo notepad (editing with elevated premission)
-doskey sudo=powershell.exe -File %DOTWIN_PS1%\sudo.ps1 $*
+doskey sudo=powershell.exe -File %DOTWIN_POSH%\sudo.ps1 $*
 :: ****************************************************************************
 
 :: ----- applications -----

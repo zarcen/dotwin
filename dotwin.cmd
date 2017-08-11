@@ -28,7 +28,7 @@ exit /b 0
 :set_dotwin_var
     :: Set dotwin Root Path
     set DOTWIN=%USERPROFILE%\dotwin
-    set DOTWIN_PS1=%DOTWIN%\ps1
+    set DOTWIN_POSH=%DOTWIN%\posh
     set DOTWIN_BASHEE=%DOTWIN%\bashee
     :: Put bash wrapper scripts to be visible in PATH;
     :: Change order if prefer system default
@@ -42,18 +42,17 @@ exit /b
 :::::: PROMPT setting :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :set_prompt
 :: This will start prompt with `user@hostname`
-set PromptHead=$E[0;36m%USERNAME%@%COMPUTERNAME%$E[0;37m$S
+set PS1=$E[0;36m%USERNAME%@%COMPUTERNAME%$E[0;37m$S
 
-:: Followed by colored `pwd`
-set PromptHead=%PromptHead%$E[0;32m$P$E[0;37m
+:: Followed by colored `%cd%`
+set PS1=%PS1%$E[1;32m$P$E[0;37m
 
 :: Use net command to test if it's run by Admin or not
 :: Carriage return and `$`(Admin) or `>`(User)
-net session >nul 2>&1 && set PromptRet=$E[1;31m$$$E[1;37m$S || set PromptRet=$E[1;31m$G$E[1;37m$S
+net session >nul 2>&1 && set PS2=$E[1;31m$$$E[1;37m || set PS2=$E[1;31m$G$E[1;37m$S
 
-:: Set new prompt and show current time (format hh:mm:ss)
-set PS1=%PromptHead%$_$C$T$F%PromptRet%
-PROMPT %PS1%
+:: Set new prompt with %PS1% (the first line) and %PS2% (the second line)
+PROMPT %PS1%$_%PS2%
 exit /b 0
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -65,7 +64,7 @@ if "%PROCESSOR_ARCHITECTURE%"=="x86" (
     set architecture=64
 )
 :: Run clink
-%DOTWIN%\clink\clink_x%architecture%.exe inject --quiet
+::%DOTWIN%\clink\clink_x%architecture%.exe inject --quiet
 
 
 exit /b 0

@@ -182,6 +182,11 @@ function Enable-Subsystem-Linux {
     }
 }
 
+$execPolicy=Get-ExecutionPolicy
+if ($execPolicy -eq "Restricted") {
+    "ExecutionPolicy is Restricted. Use `Set-ExecutionPolicy [Restricted|AllSigned|RemoteSigned|Unrestricted]` to change." 
+}
+
 Enable-Subsystem-Linux
 Deploy-Cmd-AutoRun-Regpath
 Deploy-Bashee
